@@ -1,0 +1,396 @@
+@import "_maps";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: rgb(117, 117, 117);
+}
+
+header {
+  // background: linear-gradient(0deg, map-get($theme-blue, danavy) 75%);
+  // border-bottom: 1px solid map-get($theme-blue, danavy);
+
+  .header-logo {
+    display: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    list-style: none;
+    margin: 1rem 0.5rem;
+  }
+
+  a {
+    color: map-get($theme-purple, neonpur);
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+main {
+  margin: 0 auto;
+}
+
+section {
+  text-align: center;
+  width: 100%;
+}
+
+.page2,
+.page3,
+.page4 .max-width {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.page1 {
+  background: linear-gradient(
+    0deg,
+    white 1%,
+    map-get($theme-blue, secondary) 5%,
+    map-get($theme-purple, neon) 10%,
+    map-get($theme-purple, neon) 12%,
+    white 30%
+  );
+  font-weight: bold;
+  height: 800px;
+  padding: 1rem;
+  z-index: -3;
+
+  .logo {
+    width: 200px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  img {
+    width: 65%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  i {
+    width: 40%;
+    margin: 1rem 0.5rem;
+    color: map-get($theme-blue, orangli);
+    font-size: 6rem;
+    text-shadow: 4px 3px 4px white;
+    transition: all 0.2s ease-in-out;
+  }
+
+  button {
+    background: linear-gradient(
+      90deg,
+      map-get($theme-purple, lila) 20%,
+      map-get($theme-blue, secondary) 95%
+    );
+    border: 2px solid map-get($theme-purple, neon);
+    border-radius: 50px;
+    color: white;
+    font-size: 1.3rem;
+    // font-weight: bold;
+    letter-spacing: 1.5px;
+    margin: 1rem 0;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  button:hover,
+  i:hover {
+    transform: scale(1.1);
+  }
+}
+
+.page2 {
+  position: relative;
+  top: -100px;
+  background: white;
+  border: 1px solid white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+  h1 {
+    margin-top: 1rem;
+  }
+
+  .examples {
+    background: linear-gradient(
+      90deg,
+      map-get($theme-blue, turq) 0%,
+      map-get($theme-blue, purp) 90%
+    );
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    margin: 1rem auto;
+    width: 90%;
+  }
+
+  .wallpaper {
+    width: 100%;
+  }
+}
+
+.page3 {
+  margin: 0 auto;
+  position: relative;
+  top: -50px;
+  width: 80%;
+
+  i,
+  span {
+    color: map-get($theme-purple, neon);
+  }
+
+  .web {
+    margin: 0 auto;
+    padding: 1.5rem;
+    width: 80%;
+  }
+
+  i {
+    font-size: 5rem;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  i,
+  h1,
+  .detail {
+    padding: 0.5rem;
+  }
+}
+
+.page4 {
+  height: 400px;
+  width: 100%;
+  margin: 1rem auto;
+  background: linear-gradient(
+    0deg,
+    white 1%,
+    map-get($theme-purple, neon) 7%,
+    map-get($theme-blue, secondary) 10%,
+    map-get($theme-blue, secondary) 12%,
+    white 30%
+  );
+  form {
+    border: 2px solid white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    margin: 1rem auto;
+    height: 400px;
+    background: rgb(220, 220, 220);
+  }
+}
+
+footer {
+  width: 100%;
+  margin: 1rem auto;
+  // background-color: map-get($theme-purple, darker);
+  padding: 1rem;
+
+  .details {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+  }
+
+  .google-reviews {
+    display: none;
+  }
+
+  .declare {
+    margin: 0.5rem auto;
+    width: 50%;
+  }
+
+  div {
+    padding: 0.3rem;
+  }
+
+  h3,
+  p {
+    color: grey;
+  }
+
+  a {
+    color: map-get($theme-blue, secondary);
+  }
+}
+
+// MEDIA QUERIES
+
+@media only screen and (min-width: 480px) {
+  .page3 {
+    .web {
+      margin: 0 auto;
+      padding: 1.5rem;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    .main-width {
+      margin: 0 auto;
+      max-width: 1024px;
+      display: flex;
+      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    .header-logo {
+      display: block;
+    }
+  }
+
+  .page1 {
+    .logo {
+      width: 42.5%;
+    }
+
+    .logo {
+      display: none;
+    }
+  }
+
+  .page2 {
+    .example-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .examples {
+      width: 45%;
+    }
+  }
+
+  .page3 {
+    display: flex;
+
+    .web {
+      margin: 0 auto;
+      padding: 1.5rem;
+      width: 50%;
+    }
+  }
+
+  .page4 {
+    .max-width {
+      margin: 0 auto;
+    }
+
+    form {
+      max-width: 100%;
+    }
+  }
+
+  footer {
+    .details {
+      width: 40%;
+    }
+
+    .declare {
+      margin: 0 0;
+      width: 30%;
+    }
+
+    .footering {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .page1 .max-width,
+  .page2,
+  .page3,
+  .page4 .max-width {
+    max-width: 1024px;
+  }
+
+  .page1 {
+    height: 576px;
+    .main-width {
+      margin: 0 auto;
+    }
+  }
+
+  .page2 {
+    .examples {
+      width: 40%;
+    }
+  }
+
+  footer {
+    max-width: 1024px;
+    .footering {
+      display: flex;
+      justify-content: center;
+    }
+
+    .details {
+      width: 45%;
+    }
+
+    .declare {
+      width: 20%;
+    }
+
+    .google-reviews {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (min-width: 1152px) {
+  .page1 {
+    height: 648px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .page1 {
+    height: 720px;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .page1 {
+    height: 768px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .page1 {
+    height: 900px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .page1 {
+    height: 900px;
+  }
+}

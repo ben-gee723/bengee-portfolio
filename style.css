@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #757575;
+}
+
+header .header-logo {
+  display: none;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header li {
+  list-style: none;
+  margin: 1rem 0.5rem;
+}
+
+header a {
+  color: #8e64eb;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+main {
+  margin: 0 auto;
+}
+
+section {
+  text-align: center;
+  width: 100%;
+}
+
+.page2,
+.page3,
+.page4 .max-width {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.page1 {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(1%, white), color-stop(5%, #60ccfd), color-stop(10%, #b060d9), color-stop(12%, #b060d9), color-stop(30%, white));
+  background: linear-gradient(0deg, white 1%, #60ccfd 5%, #b060d9 10%, #b060d9 12%, white 30%);
+  font-weight: bold;
+  height: 800px;
+  padding: 1rem;
+  z-index: -3;
+}
+
+.page1 .logo {
+  width: 200px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.page1 img {
+  width: 65%;
+}
+
+.page1 h1 {
+  font-size: 3rem;
+}
+
+.page1 p {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.page1 i {
+  width: 40%;
+  margin: 1rem 0.5rem;
+  color: #fa9168;
+  font-size: 6rem;
+  text-shadow: 4px 3px 4px white;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.page1 button {
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #8db3f4), color-stop(95%, #60ccfd));
+  background: linear-gradient(90deg, #8db3f4 20%, #60ccfd 95%);
+  border: 2px solid #b060d9;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+  margin: 1rem 0;
+  padding: 0.5rem 1.5rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.page1 button:hover,
+.page1 i:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.page2 {
+  position: relative;
+  top: -100px;
+  background: white;
+  border: 1px solid white;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.page2 h1 {
+  margin-top: 1rem;
+}
+
+.page2 .examples {
+  background: -webkit-gradient(linear, left top, right top, from(#239dba), color-stop(90%, #7369fc));
+  background: linear-gradient(90deg, #239dba 0%, #7369fc 90%);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  margin: 1rem auto;
+  width: 90%;
+}
+
+.page2 .wallpaper {
+  width: 100%;
+}
+
+.page3 {
+  margin: 0 auto;
+  position: relative;
+  top: -50px;
+  width: 80%;
+}
+
+.page3 i,
+.page3 span {
+  color: #b060d9;
+}
+
+.page3 .web {
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: 80%;
+}
+
+.page3 i {
+  font-size: 5rem;
+}
+
+.page3 span {
+  font-weight: bold;
+}
+
+.page3 i,
+.page3 h1,
+.page3 .detail {
+  padding: 0.5rem;
+}
+
+.page4 {
+  height: 400px;
+  width: 100%;
+  margin: 1rem auto;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(1%, white), color-stop(7%, #b060d9), color-stop(10%, #60ccfd), color-stop(12%, #60ccfd), color-stop(30%, white));
+  background: linear-gradient(0deg, white 1%, #b060d9 7%, #60ccfd 10%, #60ccfd 12%, white 30%);
+}
+
+.page4 form {
+  border: 2px solid white;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  margin: 1rem auto;
+  height: 400px;
+  background: gainsboro;
+}
+
+footer {
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+footer .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .google-reviews {
+  display: none;
+}
+
+footer .declare {
+  margin: 0.5rem auto;
+  width: 50%;
+}
+
+footer div {
+  padding: 0.3rem;
+}
+
+footer h3,
+footer p {
+  color: grey;
+}
+
+footer a {
+  color: #60ccfd;
+}
+
+@media only screen and (min-width: 480px) {
+  .page3 .web {
+    margin: 0 auto;
+    padding: 1.5rem;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header .main-width {
+    margin: 0 auto;
+    max-width: 1024px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 2rem;
+  }
+  header .header-logo {
+    display: block;
+  }
+  .page1 .logo {
+    width: 42.5%;
+  }
+  .page1 .logo {
+    display: none;
+  }
+  .page2 .example-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .page2 .examples {
+    width: 45%;
+  }
+  .page3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .page3 .web {
+    margin: 0 auto;
+    padding: 1.5rem;
+    width: 50%;
+  }
+  .page4 .max-width {
+    margin: 0 auto;
+  }
+  .page4 form {
+    max-width: 100%;
+  }
+  footer .details {
+    width: 40%;
+  }
+  footer .declare {
+    margin: 0 0;
+    width: 30%;
+  }
+  footer .footering {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .page1 .max-width,
+  .page2,
+  .page3,
+  .page4 .max-width {
+    max-width: 1024px;
+  }
+  .page1 {
+    height: 576px;
+  }
+  .page1 .main-width {
+    margin: 0 auto;
+  }
+  .page2 .examples {
+    width: 40%;
+  }
+  footer {
+    max-width: 1024px;
+  }
+  footer .footering {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .details {
+    width: 45%;
+  }
+  footer .declare {
+    width: 20%;
+  }
+  footer .google-reviews {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1152px) {
+  .page1 {
+    height: 648px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .page1 {
+    height: 720px;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .page1 {
+    height: 768px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .page1 {
+    height: 900px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .page1 {
+    height: 900px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
