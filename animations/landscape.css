@@ -3,12 +3,30 @@
   box-sizing: border-box;
 }
 
+.frame {
+  width: 100%;
+  height: 608px;
+  display: flex;
+  /* border: 1px solid red; */
+}
+
 main {
   margin: 0 auto;
   padding: 0;
   max-width: 1024px;
   height: 576px;
   /* background-color: teal; */
+}
+
+body {
+  z-index: 1;
+}
+
+.frames {
+  width: 100%;
+  /* border: 1px solid rgb(0, 75, 88); */
+  background-color: white;
+  z-index: 3;
 }
 
 .sky,
@@ -20,6 +38,7 @@ main {
 }
 
 .sky {
+  overflow: hidden;
   height: 259px;
   background: linear-gradient(
     0deg,
@@ -40,6 +59,10 @@ main {
   height: 317px;
 }
 
+/*  */
+/*  */
+/* SUN FUN!!! */
+
 .sun1,
 .sun2,
 .sun3,
@@ -51,7 +74,10 @@ main {
   z-index: 1;
 }
 
+/*  */
+/*  */
 /* COLOR */
+
 .sun1,
 .sun3 {
   background-color: rgba(217, 240, 17, 0.5);
@@ -62,7 +88,10 @@ main {
   background-color: rgb(255, 165, 0, 0.5);
 }
 
+/*  */
+/*  */
 /* SIZE */
+
 .sun1,
 .sun2 {
   left: 300px;
@@ -78,7 +107,9 @@ main {
   height: 55px;
 }
 
-/* OUTER ANIMATION */
+/*  */
+/*  */
+/* OUTER ANIMATION - SCALE */
 
 .sun1 {
   top: -30px;
@@ -92,7 +123,10 @@ main {
   animation-duration: 2s;
 }
 
-/* INNER ANIMATION */
+/*  */
+/*  */
+/* INNER ANIMATION - SCALE */
+
 .sun3 {
   top: 230px;
   animation-name: sun1;
@@ -106,16 +140,51 @@ main {
   top: -260px;
 }
 
-.clouds {
-  background: rgb(255, 255, 255, 0.7);
-  border-radius: 50%;
+.sunray1 {
   position: relative;
+  left: 200px;
+  top: -430px;
+  height: 300px;
+  width: 300px;
+  background-color: rgb(255, 255, 255, 0.2);
+  border-radius: 50%;
+
+  animation-name: sun2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.sunray2 {
+  position: relative;
+  left: 150px;
+  top: -770px;
+  height: 400px;
+  width: 400px;
+  background-color: rgb(255, 255, 255, 0.2);
+  border-radius: 50%;
+
+  animation-name: sun2;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+
+/*  */
+/*  */
+/* CLOUD TRANSLATIONS */
+
+.clouds {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.7);
+  /* background: black; */
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
 }
 
 .cloudgroup1 {
   position: relative;
-  top: -210px;
-  left: -200px;
+  top: -1010px;
+  /* left: 200px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -129,8 +198,8 @@ main {
 
 .cloudgroup2 {
   position: relative;
-  top: -250px;
-  left: -200px;
+  top: -850px;
+  /* left: -200px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -144,8 +213,8 @@ main {
 
 .cloudgroup3 {
   position: relative;
-  top: -250px;
-  left: -200px;
+  top: -850px;
+  /* left: -200px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -183,6 +252,10 @@ main {
   height: 60px;
 }
 
+/*  */
+/*  */
+/* SUN REFLECTIONS - SCALE */
+
 .sunreflect0,
 .sunreflect1,
 .sunreflect2,
@@ -205,13 +278,14 @@ main {
   border-radius: 100%;
   border-bottom-left-radius: 0%;
   border-bottom-right-radius: 0%;
-  top: -55px;
+  top: -755px;
   left: 285px;
   height: 5px;
   width: 120px;
 
   animation-name: sunreflect1;
   animation-duration: 3s;
+  z-index: 5;
 }
 
 .sunreflect1 {
@@ -271,6 +345,10 @@ main {
   animation-duration: 3s;
 }
 
+/*  */
+/*  */
+/* BOAT ANIMATION - TRANSLATE */
+
 .boat-container {
   position: relative;
   left: -50px;
@@ -281,6 +359,7 @@ main {
   transition: all ease-in 1s;
   animation-delay: 10s;
   animation-duration: 90s;
+  z-index: -1;
 }
 
 .boat {
@@ -315,6 +394,54 @@ main {
   display: block;
 }
 
+/*  */
+/*  */
+/* WAVES - TRANSLATION */
+
+svg {
+  position: absolute;
+  overflow: hidden;
+  top: -30px;
+  left: 1000px;
+  width: 400px;
+  z-index: 0;
+}
+
+.wave-container {
+  z-index: -1;
+  width: 1024px;
+  overflow: hidden;
+}
+
+.big path,
+.rolling path,
+.small path {
+  overflow: hidden;
+  fill: rgb(47, 74, 118);
+}
+
+.big,
+.rolling,
+.small {
+  animation-name: big;
+  animation-iteration-count: infinite;
+  overflow: hidden;
+}
+
+.big {
+  animation-duration: 120s;
+  animation-delay: 20s;
+}
+
+.rolling {
+  animation-duration: 120s;
+  animation-delay: 5s;
+}
+
+.small {
+  animation-duration: 100s;
+}
+
 .sea {
   position: relative;
   height: 30px;
@@ -329,6 +456,7 @@ main {
 }
 
 .shore {
+  overflow: hidden;
   height: 320px;
   background: linear-gradient(
     -10deg,
@@ -342,12 +470,17 @@ main {
 }
 
 .sand {
+  overflow: hidden;
   position: relative;
   height: 100%;
   width: 100%;
   background-color: rgb(203, 172, 134);
   z-index: -3;
 }
+
+/*  */
+/*  */
+/* ANIMATIONS */
 
 @keyframes sun1 {
   50% {
@@ -363,13 +496,13 @@ main {
 
 @keyframes cloudgroup1 {
   0% {
-    transform: translate(1300px);
+    transform: translate(1200px);
   }
 }
 
 @keyframes cloudgroup2 {
   0% {
-    transform: translate(1400px);
+    transform: translate(1200px);
   }
 }
 
@@ -388,5 +521,11 @@ main {
 @keyframes boat {
   0% {
     transform: translate(1100px);
+  }
+}
+
+@keyframes big {
+  0% {
+    transform: translate(-1000px);
   }
 }

@@ -7,49 +7,80 @@
     <title>bengee- landscape animations</title>
   </head>
   <body>
-    <main>
-      <div class="sky">
-        <div class="sun1"></div>
-        <div class="sun2"></div>
-        <div class="sun3"></div>
-        <div class="sun4"></div>
-        <div class="sunreflect0"></div>
-        <div class="cloudgroups cloudgroup3">
-          <div class="clouds cloud1"></div>
-          <div class="clouds cloud4"></div>
-        </div>
-        <div class="cloudgroups cloudgroup1">
-          <div class="clouds cloud1"></div>
-          <div class="clouds cloud2"></div>
-          <div class="clouds cloud3"></div>
-        </div>
-        <div class="cloudgroups cloudgroup2">
-          <div class="clouds cloud3"></div>
-          <div class="clouds cloud4"></div>
-        </div>
-      </div>
-      <div class="background">
-        <div class="boat-container">
-          <div class="boat"></div>
-        </div>
-      </div>
-      <div class="midground"></div>
-      <div class="foreground">
-        <div class="water">
-          <div class="sea">
-            <div class="sunreflect1"></div>
-            <div class="shore">
-              <div class="sunreflect2"></div>
-              <div class="sunreflect3"></div>
-              <div class="sunreflect4"></div>
-              <div class="sunreflect5"></div>
-              <div class="sunreflect6"></div>
-            </div>
+    <section class="frame">
+      <!-- <div class="frames leftframe"></div> -->
+      <main>
+        <div class="sky">
+          <div class="sun1"></div>
+          <div class="sun2"></div>
+          <div class="sun3"></div>
+          <div class="sun4"></div>
+          <div class="sunray1"></div>
+          <div class="sunray2"></div>
+          <div class="sunreflect0"></div>
+          <div class="cloudgroups cloudgroup3">
+            <div class="clouds cloud1"></div>
+            <div class="clouds cloud4"></div>
+          </div>
+          <div class="cloudgroups cloudgroup1">
+            <div class="clouds cloud1"></div>
+            <div class="clouds cloud2"></div>
+            <div class="clouds cloud3"></div>
+          </div>
+          <div class="cloudgroups cloudgroup2">
+            <div class="clouds cloud3"></div>
+            <div class="clouds cloud4"></div>
           </div>
         </div>
-        <div class="sand"></div>
-        <div class="greenery"></div>
-      </div>
-    </main>
+        <div class="background">
+          <div class="boat-container">
+            <div class="boat"></div>
+          </div>
+        </div>
+        <div class="midground"></div>
+        <div class="foreground">
+          <div class="water">
+            <div class="sea">
+              <div class="sunreflect1"></div>
+
+              <div class="shore">
+                <div class="wave-container">
+                  <svg class="wave wave1 big" viewBox="0 300 800 600">
+                    <path
+                      fill="#000000"
+                      fill-opacity="1"
+                      d="M 0 450 Q 100 400 150 400 Q 200 450 250 400 Q 350 350 400 400 Q 450 450 500 400 Q 600 350 650 400 C 750 450 700 350 800 450 Z"
+                    ></path>
+                  </svg>
+                  <svg class="wave wave2 rolling" viewBox="0 0 800 600">
+                    <path
+                      fill="#000000"
+                      fill-opacity="1"
+                      d="M 100 350 Q 156 288 198 332 Q 274 282 300 330 Q 379 259 387 329 C 454 363 466 298 514 293 C 496 391 631 232 643 292 C 664 319 735 355 750 350 Z "
+                    ></path>
+                  </svg>
+                  <svg class="wave wave3 small" viewBox="0 0 800 600">
+                    <path
+                      fill="#000000"
+                      fill-opacity="1"
+                      d="M 17 238 Q 77 183 103 225 Q 186 179 185 224 Q 250 192 276 225 C 309 208 344 182 379 222 C 465 182 467 210 459 238 Z"
+                    ></path>
+                  </svg>
+                  <svg class="wave wave4"></svg>
+                </div>
+                <div class="sunreflect2"></div>
+                <div class="sunreflect3"></div>
+                <div class="sunreflect4"></div>
+                <div class="sunreflect5"></div>
+                <div class="sunreflect6"></div>
+              </div>
+            </div>
+          </div>
+          <div class="sand"></div>
+          <div class="greenery"></div>
+        </div>
+      </main>
+      <!-- <div class="frames rightframe"></div> -->
+    </section>
   </body>
 </html>
