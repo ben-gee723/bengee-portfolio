@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1024px;
+  height: 576px;
+  /* background-color: teal; */
+}
+
+.sky,
+.foreground,
+.sand,
+.sea,
+.shore {
+  width: 1024px;
+}
+
+.sky {
+  height: 259px;
+  background: linear-gradient(
+    0deg,
+    rgb(165, 163, 157) 5%,
+    rgb(105, 138, 173) 15%,
+    rgb(109, 141, 244) 100%
+  );
+  z-index: -3;
+}
+
+.background {
+  position: absolute;
+  z-index: 1;
+}
+
+.foreground {
+  position: relative;
+  height: 317px;
+}
+
+.sun1,
+.sun2,
+.sun3,
+.sun4 {
+  position: relative;
+  border-radius: 50%;
+  animation-iteration-count: infinite;
+  transition: all ease-in 1s;
+  z-index: 1;
+}
+
+/* COLOR */
+.sun1,
+.sun3 {
+  background-color: rgba(217, 240, 17, 0.5);
+}
+
+.sun2,
+.sun4 {
+  background-color: rgb(255, 165, 0, 0.5);
+}
+
+/* SIZE */
+.sun1,
+.sun2 {
+  left: 300px;
+  width: 100px;
+  height: 100px;
+}
+
+.sun3,
+.sun4 {
+  position: relative;
+  left: 323px;
+  width: 55px;
+  height: 55px;
+}
+
+/* OUTER ANIMATION */
+
+.sun1 {
+  top: -30px;
+  animation-name: sun1;
+  animation-duration: 3s;
+}
+
+.sun2 {
+  top: -130px;
+  animation-name: sun2;
+  animation-duration: 2s;
+}
+
+/* INNER ANIMATION */
+.sun3 {
+  top: 230px;
+  animation-name: sun1;
+  animation-duration: 2.5s;
+  top: -206px;
+}
+
+.sun4 {
+  animation-name: sun2;
+  animation-duration: 2.5s;
+  top: -260px;
+}
+
+.clouds {
+  background: rgb(255, 255, 255, 0.7);
+  border-radius: 50%;
+  position: relative;
+}
+
+.cloudgroup1 {
+  position: relative;
+  top: -210px;
+  left: -200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+
+  animation-name: cloudgroup1;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+}
+
+.cloudgroup2 {
+  position: relative;
+  top: -250px;
+  left: -200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+
+  animation-name: cloudgroup2;
+  animation-duration: 80s;
+  animation-iteration-count: infinite;
+}
+
+.cloudgroup3 {
+  position: relative;
+  top: -250px;
+  left: -200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+
+  animation-name: cloudgroup1;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  z-index: 3;
+}
+
+.cloud1 {
+  top: 15px;
+  left: 10px;
+  width: 40px;
+  height: 30px;
+}
+
+.cloud2 {
+  width: 60px;
+  height: 40px;
+}
+
+.cloud3 {
+  top: -20px;
+  left: 15px;
+  width: 50px;
+  height: 40px;
+}
+
+.cloud4 {
+  top: -55px;
+  width: 80px;
+  height: 60px;
+}
+
+.sunreflect0,
+.sunreflect1,
+.sunreflect2,
+.sunreflect3,
+.sunreflect4,
+.sunreflect5,
+.sunreflect6 {
+  position: relative;
+  border-radius: 50%;
+  background: rgb(255, 255, 255, 0.7);
+
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transition: all ease-in 1s;
+  z-index: 1;
+}
+
+.sunreflect0 {
+  position: relative;
+  border-radius: 100%;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  top: -55px;
+  left: 285px;
+  height: 5px;
+  width: 120px;
+
+  animation-name: sunreflect1;
+  animation-duration: 3s;
+}
+
+.sunreflect1 {
+  top: -7px;
+  left: 215px;
+  height: 25px;
+  width: 260px;
+
+  animation-name: sunreflect1;
+  animation-duration: 3s;
+}
+
+.sunreflect2 {
+  left: 245px;
+  height: 15px;
+  width: 200px;
+
+  animation-name: sunreflect2;
+  animation-duration: 2.5s;
+}
+
+.sunreflect3 {
+  left: 265px;
+  height: 16px;
+  width: 150px;
+
+  animation-name: sunreflect1;
+  animation-duration: 3s;
+}
+
+.sunreflect4 {
+  position: relative;
+  left: 255px;
+  height: 18px;
+  width: 180px;
+
+  animation-name: sunreflect2;
+  animation-duration: 3s;
+}
+
+.sunreflect5 {
+  left: 285px;
+  height: 16px;
+  width: 130px;
+
+  animation-name: sunreflect2;
+  animation-duration: 3s;
+}
+
+.sunreflect6 {
+  top: 35px;
+  left: 255px;
+  height: 25px;
+  width: 100px;
+
+  animation-name: sunreflect1;
+  animation-duration: 3s;
+}
+
+.boat-container {
+  position: relative;
+  left: -50px;
+  top: 5px;
+
+  animation-name: boat;
+  animation-iteration-count: infinite;
+  transition: all ease-in 1s;
+  animation-delay: 10s;
+  animation-duration: 90s;
+}
+
+.boat {
+  shape-outside: polygon(
+    0 5px,
+    20px 5px,
+    20px 0,
+    35px 0,
+    35px 5px,
+    40px 5px,
+    35px 15px,
+    10px 15px
+  );
+
+  clip-path: polygon(
+    0 5px,
+    20px 5px,
+    20px 0,
+    35px 0,
+    35px 5px,
+    40px 5px,
+    35px 15px,
+    10px 15px
+  );
+
+  height: 30px;
+  width: 80px;
+  background: rgb(255, 255, 255, 0.8);
+}
+
+.water {
+  display: block;
+}
+
+.sea {
+  position: relative;
+  height: 30px;
+  background: rgb(0, 75, 88);
+  background: linear-gradient(
+    -3deg,
+    rgb(105, 138, 173) 1%,
+    rgb(0, 75, 88) 10%,
+    rgb(47, 74, 118) 100%
+  );
+  z-index: -2;
+}
+
+.shore {
+  height: 320px;
+  background: linear-gradient(
+    -10deg,
+    rgb(255, 255, 255, 0.1) 0%,
+    rgb(165, 163, 157, 0.2) 25%,
+    rgb(105, 138, 173, 0.2) 37%,
+    rgb(0, 75, 88) 72%,
+    rgb(47, 74, 118) 100%
+  );
+  z-index: -3;
+}
+
+.sand {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(203, 172, 134);
+  z-index: -3;
+}
+
+@keyframes sun1 {
+  50% {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes sun2 {
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes cloudgroup1 {
+  0% {
+    transform: translate(1300px);
+  }
+}
+
+@keyframes cloudgroup2 {
+  0% {
+    transform: translate(1400px);
+  }
+}
+
+@keyframes sunreflect1 {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes sunreflect2 {
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes boat {
+  0% {
+    transform: translate(1100px);
+  }
+}
